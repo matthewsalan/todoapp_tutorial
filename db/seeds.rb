@@ -5,3 +5,20 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+require "faker"
+include Faker
+
+# 100.times do 
+#   todo_list = TodoList.create(
+#     :title => "#{Name.name}",
+#     :description => Lorem.paragraphs.join("<br/>")
+#   )
+# end
+
+100.times do 
+  todo_item = TodoItem.create(
+    :content => Lorem.word,
+    :todo_list_id => rand(1..100)
+  )
+end

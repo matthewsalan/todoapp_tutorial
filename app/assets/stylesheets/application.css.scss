@@ -176,6 +176,21 @@ body {
   }
 }
 
+.pagination {
+  display: block;
+  margin: 1.5em auto 0 auto;
+  text-align: center;
+  font-size: 1em;
+  color: white;
+  a {
+    color: white;
+  }
+}
+
+.pagination .current {
+  color: #3072a4;
+}
+
 .forms {
   padding: 0 5%;
 }
