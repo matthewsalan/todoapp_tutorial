@@ -13,6 +13,15 @@ class TodoListsController < ApplicationController
   def show
   end
 
+  def search 
+    if params[:query]
+      @results = TodoList.search_by_list(params[:query])
+      render json: { results: @results }
+    else
+      render json: { message: "No query provided" }
+    end
+  end
+
   # GET /todo_lists/new
   def new
     @todo_list = TodoList.new
